@@ -1,9 +1,16 @@
 $(document).ready(function() {
     $.ajax({
-        url: './data/szzs.json',
+        url: './data/有研新材.json',
     }).done(function(obj) {
         //dataList = obj.chartlist;
-        dataList = obj;
+        var symbol;
+        if (obj.chartlist) {
+            dataList = obj.chartlist;
+            symbol = obj.stock.symbol;
+        } else {
+            dataList = obj;
+        }
+
         var getAvgVol = function(data, day) {
             var sum = 0;
             for (i = day; i >= 1; i--) {
@@ -42,12 +49,17 @@ $(document).ready(function() {
 
         dataList = dataList.filter(function(data) {
             var d = new Date(data.time);
-            var d2 = new Date('2005-01-01');
-            return d.getTime() > d2.getTime();
+            var d2 = new Date('2007-10-16');
+            return d.getTime() > d2.getTime() && data.ma60;
         });
 
         var accountList = [];
-        var maArr = [10, 15, 20, 25, 30, 35, 60];
+        var maArr = [];
+        for (var i = 5; i < 60; i++) {
+            maArr.push(i);
+        }
+
+        //maArr = [20];
 
         $.each(maArr, function(idx, ma) {
             var account = new Account({
@@ -94,36 +106,41 @@ $(document).ready(function() {
                     account.run({data: data, dataList:dataList});
                     account.moneyArr.push(account.money);
                 });
+                dateArr.push(formatDate(data.time))
+                baseArr.push(data.close);
             }
 
-            dateArr.push(formatDate(data.time))
-            baseArr.push(data.close);
-            ma5Arr.push(data.ma5);
-            ma10Arr.push(data.ma10);
+
             preData = data;
 
         })
+        $.each(accountList, function(idx, account) {
+            account.profit = account.money / account.originMoney;
+        });
 
         var baseProfit = baseArr[baseArr.length - 1] / dataList[0].close;
         console.log('基准收益：' + baseProfit);
         //return;
 
         var series = [];
-        $.each(accountList, function(idx, account) {
 
-            var profit = account.money / account.originMoney;
-            console.log(account.ma + '均线策略收益：' + profit);
-            console.log('策略收益／基准收益：' + profit / baseProfit);
-
-            series.push({
-                name: account.ma,
-                data: account.moneyArr
-            })
+        var bestAccount = _.max(accountList, function(account) {
+            return account.money;
         });
+        console.log(bestAccount.ma + '均线策略收益：' + bestAccount.profit);
+        console.log('策略收益／基准收益：' + bestAccount.profit / baseProfit);
+
+        series.push({
+            name: bestAccount.ma,
+            data: bestAccount.moneyArr
+        })
+
         series.push({
             name: '基准',
             data: baseArr
         });
+
+
 
         $('#container').highcharts({
             chart: {
@@ -178,6 +195,77 @@ $(document).ready(function() {
                 trackBorderColor: 'silver',
                 trackBorderRadius: 7
             }
+        });
+
+        var maList = ['base'];
+        var profitList = [baseProfit];
+        $.each(accountList, function(idx, account) {
+            maList.push('ma' + account.ma);
+            profitList.push(account.profit);
+        });
+
+        $('#container2').highcharts({
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: symbol
+            },
+            subtitle: {
+                text: 'by murphy'
+            },
+            xAxis: [{
+                categories: maList,
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                title: {
+                    text: '收益',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: 'Rainfall',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value} mm',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 120,
+                verticalAlign: 'top',
+                y: 100,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+            },
+            series: [{
+                name: '收益',
+                type: 'column',
+                data: profitList,
+                tooltip: {
+                    valueSuffix: ''
+                }
+            }]
         });
 
     })
