@@ -1,6 +1,10 @@
 $(document).ready(function() {
     $.ajax({
+<<<<<<< HEAD
         url: './data/SH601688.json',
+=======
+        url: './data/cybz.json',
+>>>>>>> origin/master
     }).done(function(obj) {
         //dataList = obj.chartlist;
         var symbol;
@@ -54,6 +58,21 @@ $(document).ready(function() {
         });
 
         var accountList = [];
+
+
+        // macd策略
+        var account = new Account({
+            name: 'macd',
+            needBuy: function(preData) {
+                return preData.macd >= 0;
+            },
+            needSell: function(preData) {
+                return preData.macd < 0;
+            },
+            money: dataList[0].close
+        });
+        accountList.push(account);
+
         var maArr = [];
         for (var i = 5; i < 60; i++) {
             maArr.push(i);
@@ -63,11 +82,19 @@ $(document).ready(function() {
 
         $.each(maArr, function(idx, ma) {
             var account = new Account({
-                ma: ma,
+                name: 'ma' + ma,
+                needBuy: function(preData) {
+                    return preData.close > preData['ma' + ma];
+                },
+                needSell: function(preData) {
+                    return preData.close < preData['ma' + ma];
+                },
                 money: dataList[0].close
             });
             accountList.push(account);
         })
+
+
 
         var preData;
         var moneyArr = [];
@@ -131,16 +158,19 @@ $(document).ready(function() {
         console.log('策略收益／基准收益：' + bestAccount.profit / baseProfit);
 
         series.push({
-            name: bestAccount.ma,
+            name: bestAccount.name,
             data: bestAccount.moneyArr
-        })
+        });
+
+        // series.push({
+        //     name: accountList[15].ma,
+        //     data: accountList[15].moneyArr
+        // })
 
         series.push({
             name: '基准',
             data: baseArr
         });
-
-
 
         $('#container').highcharts({
             chart: {
@@ -200,7 +230,7 @@ $(document).ready(function() {
         var maList = ['base'];
         var profitList = [baseProfit];
         $.each(accountList, function(idx, account) {
-            maList.push('ma' + account.ma);
+            maList.push(account.name);
             profitList.push(account.profit);
         });
 

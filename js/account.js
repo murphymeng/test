@@ -1,10 +1,14 @@
 var Account = Class.extend({
     init: function(opt){
+        this.name = opt.name;
         this.money = opt.money;
         this.originMoney = opt.money;
         this.ma = opt.ma;
         this.moneyArr = [];
+        this.needBuy = opt.needBuy;
+        this.needSell = opt.needSell;
     },
+    name: '',
     money: 0,
     originMoney: 0,
     hasStock: false,
@@ -30,12 +34,12 @@ var Account = Class.extend({
 
 
         if (!this.hasStock) {
-            if (preData.close > preData['ma' + ma]) {
+            if (this.needBuy(preData)) {
                 this.buy(data);
             }
         }
         if (this.hasStock) {
-            if (preData.close < preData['ma' + ma]) {
+            if (this.needSell(preData)) {
                 //console.log(this.singleProfit);
                 this.sell(data);
                 //console.log(data.time);
