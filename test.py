@@ -1,12 +1,23 @@
-import numpy
-import pandas
-from pandas import DataFrame, Series
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+from pymongo import MongoClient
+import tushare
 
-df = pandas.read_json('szzs.json')
-money = 10000
+client = MongoClient('localhost', 27017)
+db = client.gupiao
+collection = db.stock
+
+data = {'symbol': 'aaa', 'name': 'bb'}
+#collection.insert(data);
+
+df = tushare.get_stock_basics()
+
+
 for index, row in df.iterrows():
-    #print row.open
-    money = money * (row.close / row.open)
-    print money
-
-#print money
+    code = '';
+    if index[0] == '6':
+        code = 'SH' + index
+    else:
+        code = 'SZ' + index
+    #print code
+    collection.insert({'code': code, 'name': row['name']});

@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: './data/有研新材.json',
+        url: './data/SH601688.json',
     }).done(function(obj) {
         //dataList = obj.chartlist;
         var symbol;
