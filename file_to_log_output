@@ -1,0 +1,292 @@
+I0611 11:25:00.662160 ethdb/database.go:82] Alloted 128MB cache and 1024 file handles to /Users/mengfei/Library/Ethereum/chaindata
+I0611 11:25:00.836702 ethdb/database.go:169] closed db:/Users/mengfei/Library/Ethereum/chaindata
+I0611 11:25:00.837610 ethdb/database.go:82] Alloted 128MB cache and 1024 file handles to /Users/mengfei/Library/Ethereum/chaindata
+I0611 11:25:00.884394 ethdb/database.go:82] Alloted 16MB cache and 16 file handles to /Users/mengfei/Library/Ethereum/dapp
+I0611 11:25:00.886764 eth/backend.go:172] Protocol Versions: [63 62 61], Network Id: 1
+I0611 11:25:00.886835 eth/backend.go:201] Blockchain DB Version: 3
+I0611 11:25:00.887791 core/blockchain.go:206] Last header: #1682128 [a0ed3da0…] TD=26463313437905319512
+I0611 11:25:00.887804 core/blockchain.go:207] Last block: #1682128 [a0ed3da0…] TD=26463313437905319512
+I0611 11:25:00.887810 core/blockchain.go:208] Fast block: #1682128 [a0ed3da0…] TD=26463313437905319512
+I0611 11:25:00.889061 p2p/server.go:311] Starting Server
+I0611 11:25:02.767177 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 11:25:02.767218 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 11:25:02.767232 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANConnectionDevice:1"
+I0611 11:25:02.767244 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 11:25:02.767255 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 11:25:02.767267 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANConnectionDevice:1"
+I0611 11:25:02.767278 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 11:25:02.767289 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 11:25:02.767301 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANConnectionDevice:1"
+I0611 11:25:02.767362 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 11:25:02.767402 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 11:25:02.767433 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 11:25:02.767445 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 11:25:02.767463 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 11:25:02.767474 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 11:25:02.822816 p2p/nat/nat.go:111] mapped network port udp:30303 -> 30303 (ethereum discovery) using UPNP IGDv1-IP1
+I0611 11:25:02.836216 p2p/discover/udp.go:217] Listening, enode://eb4101dfc56d3a623fb71b89f3cecc80f60ecfe93133a7610cd2aa695ddc398351d8a6e88b40bb208b793a2786e268759bec3ad990b0b7f041eef21725e15560@180.155.157.94:30303
+I0611 11:25:02.836412 p2p/server.go:554] Listening on [::]:30303
+I0611 11:25:02.836999 node/node.go:298] IPC endpoint opened: /Users/mengfei/Library/Ethereum/geth.ipc
+I0611 11:25:02.849778 release/release.go:132] -----------------------------------------------------------------------------------
+I0611 11:25:02.849789 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0611 11:25:02.849793 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0611 11:25:02.849798 release/release.go:135] -----------------------------------------------------------------------------------
+I0611 11:25:02.877949 p2p/nat/nat.go:111] mapped network port tcp:30303 -> 30303 (ethereum p2p) using UPNP IGDv1-IP1
+I0611 11:25:11.062365 eth/downloader/downloader.go:299] Block synchronisation started
+I0611 11:25:17.901674 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 1.149810424s. #1682129 [34b90414 / 34b90414]
+I0611 11:25:23.472079 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 7 txs in 17.656259ms. #1682130 [36cf2247 / 36cf2247]
+I0611 11:25:26.049279 core/blockchain.go:959] imported 2 block(s) (0 queued 0 ignored) including 1 txs in 13.520751ms. #1682132 [b5b0221e / cb334bda]
+I0611 11:25:26.560425 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 10.728883ms. #1682133 [92ac8b45 / 92ac8b45]
+I0611 11:25:40.836793 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 11 txs in 12.242941ms. #1682134 [fe56d861 / fe56d861]
+I0611 11:25:50.656363 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 16 txs in 17.496627ms. #1682135 [9a0e42d6 / 9a0e42d6]
+I0611 11:25:50.783662 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 7 txs in 8.721236ms. #1682136 [92f258c2 / 92f258c2]
+I0611 11:25:56.537864 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.115569ms. #1682137 [ef4c49aa / ef4c49aa]
+I0611 11:26:00.841582 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 5.141466ms. #1682138 [5218b8cd / 5218b8cd]
+I0611 11:26:13.835152 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 5.513ms. #1682139 [0b9ecf48 / 0b9ecf48]
+I0611 11:26:19.852869 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 7 txs in 14.614919ms. #1682140 [7afe80ee / 7afe80ee]
+I0611 11:27:15.692019 core/blockchain.go:959] imported 2 block(s) (0 queued 0 ignored) including 13 txs in 22.478929ms. #1682142 [0b797ca6 / 4c5ea460]
+I0611 11:27:21.498788 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 4 txs in 6.790851ms. #1682143 [888dab01 / 888dab01]
+I0611 11:27:25.296225 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 10 txs in 10.041902ms. #1682144 [0c036d03 / 0c036d03]
+I0611 11:27:33.781065 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 2.903224ms. #1682145 [fe0b56ad / fe0b56ad]
+I0611 12:27:41.112159 release/release.go:132] -----------------------------------------------------------------------------------
+I0611 12:27:41.112183 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0611 12:27:41.112192 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0611 12:27:41.112199 release/release.go:135] -----------------------------------------------------------------------------------
+I0611 12:28:13.992527 core/blockchain.go:959] imported 224 block(s) (0 queued 0 ignored) including 1281 txs in 2.271048679s. #1682369 [ffd11912 / 42a59659]
+I0611 12:28:15.305565 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 5.866045ms. #1682370 [857336e0 / 857336e0]
+I0611 12:28:24.042216 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 4.044652ms. #1682371 [acbe53f6 / acbe53f6]
+I0611 12:31:44.788398 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 7.312938ms. #1682372 [38a48298 / 38a48298]
+I0611 12:31:47.423880 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 13.867437ms. #1682373 [4b6df2fe / 4b6df2fe]
+I0611 12:31:50.003636 core/blockchain.go:959] imported 10 block(s) (0 queued 0 ignored) including 25 txs in 44.685143ms. #1682383 [e0af73c6 / 6664a8e9]
+I0611 12:31:50.950196 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 4.583398ms. #1682384 [68a8eafd / 68a8eafd]
+I0611 12:35:56.341670 core/blockchain.go:959] imported 5 block(s) (0 queued 0 ignored) including 13 txs in 24.713485ms. #1682389 [506cc965 / db07733c]
+I0611 12:35:58.155828 core/blockchain.go:959] imported 16 block(s) (0 queued 0 ignored) including 33 txs in 65.97799ms. #1682405 [3f90a6b1 / 181eab43]
+I0611 12:36:05.479404 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 11.919875ms. #1682406 [a4148add / a4148add]
+I0611 12:36:07.237900 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 4.490984ms. #1682407 [204f7bb0 / 204f7bb0]
+I0611 12:36:09.049572 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 4.238124ms. #1682408 [89d14cda / 89d14cda]
+I0611 12:36:12.081743 core/blockchain.go:959] imported 0 block(s) (0 queued 2 ignored) including 0 txs in 4.308838ms. #1682407 [a4148add / 204f7bb0]
+I0611 12:36:13.412905 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 5.65381ms. #1682409 [8e83159b / 8e83159b]
+I0611 12:46:33.613709 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 7.725194ms. #1682410 [c528e995 / c528e995]
+I0611 12:46:38.021562 core/blockchain.go:959] imported 44 block(s) (0 queued 0 ignored) including 95 txs in 194.42888ms. #1682454 [9ff1fd16 / 62b9bec2]
+I0611 12:46:44.431922 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.023262ms. #1682455 [52350073 / 52350073]
+I0611 13:46:51.013189 release/release.go:132] -----------------------------------------------------------------------------------
+I0611 13:46:51.013211 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0611 13:46:51.013220 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0611 13:46:51.013228 release/release.go:135] -----------------------------------------------------------------------------------
+I0611 13:47:22.846626 eth/downloader/downloader.go:278] Synchronisation failed: peer is unknown or unhealthy
+I0611 15:17:36.025213 release/release.go:132] -----------------------------------------------------------------------------------
+I0611 15:17:36.025240 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0611 15:17:36.025250 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0611 15:17:36.025258 release/release.go:135] -----------------------------------------------------------------------------------
+I0611 15:17:46.054765 core/blockchain.go:959] imported 2 block(s) (0 queued 0 ignored) including 9 txs in 16.196101ms. #1682457 [e8ca0218 / 7eaf0b71]
+I0611 15:17:48.802310 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 9.328349ms. #1682458 [39e580cb / 39e580cb]
+I0611 15:17:53.633844 core/blockchain.go:959] imported 106 block(s) (0 queued 0 ignored) including 303 txs in 554.610906ms. #1682564 [d352744a / 40c1af97]
+I0611 15:18:00.579690 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 2425 txs in 6.736477041s. #1682820 [367a8057 / 0ffa32ab]
+I0611 15:18:03.234185 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1190 txs in 2.653764718s. #1683076 [a0dbaa70 / 0540c88a]
+I0611 15:18:04.974235 core/blockchain.go:959] imported 54 block(s) (0 queued 0 ignored) including 644 txs in 1.739826155s. #1683130 [f251f261 / 07173810]
+I0611 15:18:12.711529 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 6.818098ms. #1683131 [c7db86f7 / c7db86f7]
+I0611 17:18:21.110048 release/release.go:132] -----------------------------------------------------------------------------------
+I0611 17:18:21.110063 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0611 17:18:21.110071 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0611 17:18:21.110077 release/release.go:135] -----------------------------------------------------------------------------------
+I0611 17:19:04.771059 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 16 txs in 22.478154ms. #1683132 [b8abc6f2 / b8abc6f2]
+I0611 17:19:05.076841 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 11.001003ms. #1683133 [77d5e177 / 77d5e177]
+I0611 17:19:07.569712 core/blockchain.go:959] imported 7 block(s) (0 queued 0 ignored) including 51 txs in 95.652307ms. #1683140 [e623e3e7 / 33d8ac21]
+I0611 17:19:07.767103 core/blockchain.go:959] imported 17 block(s) (0 queued 0 ignored) including 129 txs in 197.190793ms. #1683157 [91ce63c1 / f4635959]
+I0611 17:19:20.414429 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 2990 txs in 8.795934995s. #1683413 [fee443e8 / 2585ca05]
+I0611 17:19:22.092737 core/blockchain.go:959] imported 213 block(s) (0 queued 0 ignored) including 732 txs in 1.677548018s. #1683626 [251cfbc9 / a985f598]
+I0611 17:19:39.652792 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 8.111506ms. #1683627 [ac5530b2 / ac5530b2]
+I0611 17:19:39.958326 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 4 txs in 9.557772ms. #1683628 [d837e225 / d837e225]
+I0611 17:20:11.286699 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.971888ms. #1683629 [5e59ffb3 / 5e59ffb3]
+I0611 17:20:30.094511 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 13 txs in 17.941543ms. #1683630 [abca499f / abca499f]
+I0611 17:58:12.100140 core/blockchain.go:959] imported 153 block(s) (0 queued 0 ignored) including 660 txs in 1.490395933s. #1683783 [e7add573 / bce50fe5]
+I0611 18:59:40.345204 release/release.go:132] -----------------------------------------------------------------------------------
+I0611 18:59:40.345223 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0611 18:59:40.345233 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0611 18:59:40.345241 release/release.go:135] -----------------------------------------------------------------------------------
+I0611 21:00:11.025742 eth/downloader/downloader.go:253] Unregister failed: peer is not registered
+I0611 21:00:11.025772 eth/handler.go:178] Removal failed: peer is not registered
+I0611 21:00:11.113807 release/release.go:132] -----------------------------------------------------------------------------------
+I0611 21:00:11.113824 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0611 21:00:11.113830 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0611 21:00:11.113836 release/release.go:135] -----------------------------------------------------------------------------------
+I0611 21:00:50.830993 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 4 txs in 7.700278ms. #1683784 [9ae05108 / 9ae05108]
+I0611 21:00:54.658517 core/blockchain.go:959] imported 8 block(s) (0 queued 0 ignored) including 126 txs in 200.519754ms. #1683792 [db9c0f67 / 6e4d9527]
+I0611 21:00:56.167513 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 4 txs in 9.827529ms. #1683793 [7246eeae / 7246eeae]
+I0611 23:00:56.024856 release/release.go:132] -----------------------------------------------------------------------------------
+I0611 23:00:56.024880 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0611 23:00:56.024889 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0611 23:00:56.024896 release/release.go:135] -----------------------------------------------------------------------------------
+I0611 23:00:56.098759 eth/downloader/downloader.go:278] Synchronisation failed: no peers to keep download active
+I0611 23:01:04.545214 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 17 txs in 27.697683ms. #1683794 [587b0ec3 / 587b0ec3]
+I0611 23:01:04.868451 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 7 txs in 13.295095ms. #1683795 [5d5d59c2 / 5d5d59c2]
+I0611 23:01:10.887228 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1160 txs in 2.190728818s. #1684051 [350d24ed / 684118ee]
+I0611 23:01:13.729827 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1354 txs in 2.84178822s. #1684307 [4372837f / b91cf178]
+I0611 23:01:13.915471 core/blockchain.go:959] imported 19 block(s) (0 queued 0 ignored) including 100 txs in 185.521815ms. #1684326 [4a7713f7 / 2c5e7bbd]
+I0611 23:01:16.829128 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1088 txs in 2.906424003s. #1684582 [9cb06308 / e9baca6e]
+I0611 23:01:20.734702 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1429 txs in 3.90444034s. #1684838 [1eff0012 / 57bf93b2]
+I0611 23:01:34.047303 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 2279 txs in 13.311312414s. #1685094 [0f8864e6 / 16a818a9]
+I0611 23:01:34.234554 core/blockchain.go:959] imported 10 block(s) (0 queued 0 ignored) including 64 txs in 187.100901ms. #1685104 [caaf00f0 / 50a40e56]
+I0611 23:01:34.531491 core/blockchain.go:959] imported 21 block(s) (0 queued 0 ignored) including 84 txs in 296.407325ms. #1685125 [1cbf6442 / c8f4f92d]
+I0611 23:01:40.471262 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 9.186463ms. #1685126 [72c17927 / 72c17927]
+I0611 23:01:40.486468 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 9.289672ms. #1685127 [093ab552 / 093ab552]
+I0611 23:01:48.820213 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 11.704ms. #1685128 [0f7aa832 / 0f7aa832]
+I0611 23:01:51.643368 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 16 txs in 44.116493ms. #1685129 [6341998f / 6341998f]
+I0611 23:01:52.371270 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 16 txs in 37.278101ms. #1685129 [daffb3f4 / daffb3f4]
+I0611 23:02:34.805628 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 4 txs in 9.211507ms. #1685130 [1ecb2503 / 1ecb2503]
+I0611 23:02:39.578525 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 10 txs in 23.754804ms. #1685131 [a47e5ac2 / a47e5ac2]
+I0611 23:02:42.861618 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.084992ms. #1685132 [17774c01 / 17774c01]
+I0611 23:02:47.756839 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 6.162139ms. #1685133 [f7b7093e / f7b7093e]
+I0611 23:02:54.333387 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.673629ms. #1685134 [644c2d3c / 644c2d3c]
+I0612 00:05:05.129296 release/release.go:132] -----------------------------------------------------------------------------------
+I0612 00:05:05.129311 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0612 00:05:05.129316 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0612 00:05:05.129319 release/release.go:135] -----------------------------------------------------------------------------------
+I0612 00:05:20.422439 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 9.41851ms. #1685135 [d40d4657 / d40d4657]
+I0612 00:05:21.262625 core/blockchain.go:959] imported 4 block(s) (0 queued 0 ignored) including 8 txs in 19.182439ms. #1685139 [4a8e3acb / 8292e2bc]
+I0612 00:05:21.717738 core/blockchain.go:959] imported 3 block(s) (0 queued 0 ignored) including 16 txs in 75.765507ms. #1685142 [8a4b16eb / 1bf9f4c0]
+I0612 00:05:25.536693 core/blockchain.go:959] imported 26 block(s) (0 queued 0 ignored) including 178 txs in 262.151456ms. #1685168 [5e824f82 / 0222257f]
+I0612 00:05:29.356489 core/blockchain.go:959] imported 115 block(s) (0 queued 0 ignored) including 761 txs in 1.142653921s. #1685283 [1173be67 / fecf632f]
+I0612 00:05:30.407698 core/blockchain.go:959] imported 79 block(s) (0 queued 0 ignored) including 279 txs in 545.285784ms. #1685362 [8d42c85c / 9b73732a]
+I0612 00:05:32.252196 core/blockchain.go:959] imported 16 block(s) (0 queued 0 ignored) including 93 txs in 140.782098ms. #1685378 [04a80b16 / 613b74c3]
+I0612 00:05:46.069140 core/blockchain.go:959] imported 3 block(s) (0 queued 0 ignored) including 9 txs in 14.649927ms. #1685381 [319d36db / 3b4087c9]
+I0612 00:05:47.021808 core/blockchain.go:959] imported 3 block(s) (0 queued 0 ignored) including 8 txs in 15.295532ms. #1685384 [64338ef7 / ee362600]
+I0612 00:05:50.215405 core/blockchain.go:959] imported 3 block(s) (0 queued 0 ignored) including 3 txs in 17.558718ms. #1685387 [c65e1e42 / 617d2030]
+I0612 00:12:51.685791 core/blockchain.go:959] imported 3 block(s) (0 queued 0 ignored) including 9 txs in 17.97955ms. #1685390 [d8412f30 / ddeab5f1]
+I0612 00:12:54.730458 core/blockchain.go:959] imported 28 block(s) (0 queued 0 ignored) including 147 txs in 225.535092ms. #1685418 [fa6d9d4d / 42eadf4e]
+I0612 00:12:54.964216 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 9.136396ms. #1685419 [c3980e4e / c3980e4e]
+I0612 00:13:01.799517 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 6 txs in 7.545947ms. #1685420 [c3edff70 / c3edff70]
+I0612 00:13:06.801685 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 7.35357ms. #1685421 [328d0dbd / 328d0dbd]
+I0612 00:13:36.680324 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 5.467428ms. #1685422 [134183e7 / 134183e7]
+I0612 00:13:46.439173 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 7 txs in 11.386304ms. #1685423 [cab0e375 / cab0e375]
+I0612 00:13:47.908338 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 2.622515ms. #1685424 [6cb416a8 / 6cb416a8]
+I0612 00:13:50.182608 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 2.674369ms. #1685425 [1d2bc1b0 / 1d2bc1b0]
+I0612 00:13:50.943997 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.35872ms. #1685425 [77e0e56c / 77e0e56c]
+I0612 00:13:53.524294 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 8.446206ms. #1685426 [cd581cd5 / cd581cd5]
+I0612 01:05:03.568217 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 4.735658ms. #1685427 [b283f1f5 / b283f1f5]
+I0612 01:05:05.031603 release/release.go:132] -----------------------------------------------------------------------------------
+I0612 01:05:05.031629 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0612 01:05:05.031637 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0612 01:05:05.031644 release/release.go:135] -----------------------------------------------------------------------------------
+I0612 01:05:05.687596 core/blockchain.go:959] imported 4 block(s) (0 queued 0 ignored) including 7 txs in 21.876353ms. #1685431 [7c5da2fe / 288d4869]
+I0612 01:05:09.723277 core/blockchain.go:959] imported 224 block(s) (0 queued 0 ignored) including 924 txs in 1.541396914s. #1685655 [1b23a529 / 41af2c15]
+I0612 01:05:10.917744 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 5.566582ms. #1685656 [0525ef2a / 0525ef2a]
+I0612 01:05:15.606904 core/blockchain.go:959] imported 2 block(s) (0 queued 1 ignored) including 11 txs in 18.675419ms. #1685658 [0525ef2a / 9db0cdaa]
+I0612 01:05:16.434500 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 3.295153ms. #1685659 [802eab96 / 802eab96]
+I0612 01:05:18.574612 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 4.444734ms. #1685660 [822e89d1 / 822e89d1]
+I0612 01:05:24.111398 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 2.711775ms. #1685661 [ff85e420 / ff85e420]
+I0612 02:05:26.150763 release/release.go:132] -----------------------------------------------------------------------------------
+I0612 02:05:26.150791 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0612 02:05:26.150800 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0612 02:05:26.150807 release/release.go:135] -----------------------------------------------------------------------------------
+I0612 02:05:51.715960 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 5.640586ms. #1685662 [4377beac / 4377beac]
+I0612 02:05:51.976328 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 6.146029ms. #1685663 [342c4be8 / 342c4be8]
+I0612 02:05:53.643544 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 6 txs in 17.591992ms. #1685664 [9b54de77 / 9b54de77]
+I0612 02:05:53.993353 core/blockchain.go:959] imported 4 block(s) (0 queued 0 ignored) including 37 txs in 42.604573ms. #1685668 [23a8244c / 50046834]
+I0612 02:05:56.555579 core/blockchain.go:959] imported 14 block(s) (0 queued 0 ignored) including 53 txs in 101.709699ms. #1685682 [108f0cde / 02273e03]
+I0612 02:05:57.057613 core/blockchain.go:959] imported 25 block(s) (0 queued 0 ignored) including 156 txs in 286.714266ms. #1685707 [0346ba25 / 7d2439e3]
+I0612 02:06:03.525388 core/blockchain.go:959] imported 195 block(s) (0 queued 0 ignored) including 954 txs in 2.251310491s. #1685902 [d0c05161 / ec6aba8b]
+I0612 02:06:04.092435 core/blockchain.go:959] imported 19 block(s) (0 queued 0 ignored) including 128 txs in 313.668546ms. #1685921 [f95a2887 / c7a248a5]
+I0612 02:06:05.021551 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 15.628358ms. #1685922 [5f81600b / 5f81600b]
+I0612 04:06:11.033908 release/release.go:132] -----------------------------------------------------------------------------------
+I0612 04:06:11.033928 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0612 04:06:11.033937 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0612 04:06:11.034343 release/release.go:135] -----------------------------------------------------------------------------------
+I0612 04:06:33.616889 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 17 txs in 25.385649ms. #1685923 [ce99b712 / ce99b712]
+I0612 04:06:37.397212 core/blockchain.go:959] imported 6 block(s) (0 queued 0 ignored) including 67 txs in 92.370518ms. #1685929 [939f4e4d / 2d705508]
+I0612 04:06:40.546725 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1032 txs in 1.78562568s. #1686185 [33b64c18 / 230cce15]
+I0612 04:06:40.906594 core/blockchain.go:959] imported 46 block(s) (0 queued 0 ignored) including 221 txs in 359.703189ms. #1686231 [9396bfbf / 48c5e0eb]
+I0612 04:06:48.657448 core/blockchain.go:959] imported 174 block(s) (0 queued 0 ignored) including 2494 txs in 7.749226382s. #1686405 [9e76e8a3 / 3a8230c3]
+I0612 04:06:48.763041 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 13 txs in 18.323364ms. #1686406 [9b748aaf / 9b748aaf]
+I0612 04:06:49.382948 core/blockchain.go:959] imported 0 block(s) (0 queued 1 ignored) including 0 txs in 4.521146ms. #1686406 [9b748aaf / 9b748aaf]
+I0612 06:06:57.029197 release/release.go:132] -----------------------------------------------------------------------------------
+I0612 06:06:57.029224 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0612 06:06:57.029233 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0612 06:06:57.029241 release/release.go:135] -----------------------------------------------------------------------------------
+I0612 06:07:19.824335 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 9.551727ms. #1686407 [19e03133 / 19e03133]
+I0612 06:07:23.935952 core/blockchain.go:959] imported 4 block(s) (0 queued 0 ignored) including 40 txs in 51.081763ms. #1686411 [d615c62e / aa350f8d]
+I0612 06:07:24.770781 core/blockchain.go:959] imported 70 block(s) (0 queued 0 ignored) including 438 txs in 650.486147ms. #1686481 [9bc7624d / 64564dd9]
+I0612 06:07:27.448488 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1320 txs in 2.075129831s. #1686737 [d4ad15ba / 441e3b72]
+I0612 06:07:28.236304 core/blockchain.go:959] imported 147 block(s) (0 queued 0 ignored) including 518 txs in 787.386428ms. #1686884 [9b0fc111 / 10556469]
+I0612 06:07:29.348094 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 4.779793ms. #1686885 [878e327b / 878e327b]
+I0612 06:07:38.280272 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 9.249848ms. #1686886 [abb3758c / abb3758c]
+I0612 06:07:39.447054 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 10.502675ms. #1686886 [c154503e / c154503e]
+I0612 06:07:41.016788 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 4.614719ms. #1686887 [d8eed011 / d8eed011]
+I0612 08:06:18.024708 release/release.go:132] -----------------------------------------------------------------------------------
+I0612 08:06:18.024728 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0612 08:06:18.024733 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0612 08:06:18.024739 release/release.go:135] -----------------------------------------------------------------------------------
+I0612 08:06:49.040737 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 4.550695ms. #1686888 [63b59a37 / 63b59a37]
+I0612 08:06:49.317205 core/blockchain.go:959] imported 5 block(s) (0 queued 0 ignored) including 11 txs in 25.08682ms. #1686893 [c2f6c0f4 / 04f1847d]
+I0612 08:06:49.324116 core/blockchain.go:959] imported 2 block(s) (0 queued 0 ignored) including 2 txs in 6.846048ms. #1686895 [d0183ffa / 5e7c07e5]
+I0612 08:06:49.348789 core/blockchain.go:959] imported 2 block(s) (0 queued 0 ignored) including 1 txs in 6.570668ms. #1686897 [28a172c8 / 8171811c]
+I0612 08:06:55.509988 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1133 txs in 1.673573751s. #1687153 [96db8cbd / d9bf4e91]
+I0612 08:06:57.439612 core/blockchain.go:959] imported 194 block(s) (0 queued 0 ignored) including 1015 txs in 1.929061684s. #1687347 [97aa7f0a / f60633f6]
+I0612 08:08:37.636095 core/blockchain.go:959] imported 33 block(s) (0 queued 0 ignored) including 3511 txs in 1m40.196093139s. #1687380 [08578121 / a8f57782]
+I0612 08:08:41.220982 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 35 txs in 38.866678ms. #1687381 [cdd939f2 / cdd939f2]
+I0612 08:08:42.650853 core/blockchain.go:959] imported 5 block(s) (0 queued 0 ignored) including 98 txs in 126.194291ms. #1687386 [bd9a8f26 / 83e83336]
+I0612 08:08:48.255569 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 19 txs in 18.803256ms. #1687387 [435eaea6 / 435eaea6]
+I0612 08:08:49.952488 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 20 txs in 18.979318ms. #1687387 [a16d4b4f / a16d4b4f]
+I0612 08:08:53.475532 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 4 txs in 9.266261ms. #1687388 [385c9e15 / 385c9e15]
+I0612 08:08:56.370873 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 2.604385ms. #1687389 [cc5708e2 / cc5708e2]
+I0612 08:09:05.745839 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 4.104194ms. #1687390 [eda929fb / eda929fb]
+I0612 09:07:57.194159 release/release.go:132] -----------------------------------------------------------------------------------
+I0612 09:07:57.194181 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0612 09:07:57.194213 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0612 09:07:57.194366 release/release.go:135] -----------------------------------------------------------------------------------
+I0612 09:09:04.168243 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 7.629923ms. #1687391 [84bb5357 / 84bb5357]
+I0612 09:09:04.215699 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 14 txs in 17.918848ms. #1687392 [4cf7300a / 4cf7300a]
+I0612 09:09:04.374413 core/blockchain.go:959] imported 4 block(s) (0 queued 0 ignored) including 71 txs in 113.747147ms. #1687396 [ea457307 / f4a7bef8]
+I0612 09:09:04.533535 core/blockchain.go:959] imported 13 block(s) (0 queued 0 ignored) including 120 txs in 158.9676ms. #1687409 [1c389a41 / bbf21524]
+I0612 09:09:04.875078 core/blockchain.go:959] imported 35 block(s) (0 queued 0 ignored) including 231 txs in 341.212757ms. #1687444 [3052de80 / 2aa89537]
+I0612 09:09:05.565621 core/blockchain.go:959] imported 67 block(s) (0 queued 0 ignored) including 300 txs in 548.559495ms. #1687511 [144a0e4b / d5fa59bf]
+I0612 09:09:06.503330 core/blockchain.go:959] imported 132 block(s) (0 queued 0 ignored) including 482 txs in 936.526603ms. #1687643 [af03a422 / 2ff56ba0]
+I0612 09:09:10.296813 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 6.266221ms. #1687644 [e4a870ed / e4a870ed]
+I0612 09:09:16.161351 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 6.366088ms. #1687645 [072028db / 072028db]
+I0612 09:09:22.933459 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 4.378353ms. #1687646 [1416a6f2 / 1416a6f2]
+I0612 09:09:26.137151 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 3.858956ms. #1687647 [d6f79831 / d6f79831]
+I0612 09:09:26.535943 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 5.086626ms. #1687647 [8c960822 / 8c960822]
+I0612 09:09:28.013542 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 2.651936ms. #1687648 [4c30ef18 / 4c30ef18]
+I0612 09:09:40.920429 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 7.657543ms. #1687649 [a1c1fde9 / a1c1fde9]
+I0612 09:09:44.515271 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 8.068319ms. #1687650 [4840f7be / 4840f7be]
+I0612 09:09:45.049914 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 6.661642ms. #1687651 [70b90dde / 70b90dde]
+I0612 09:09:51.542295 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.14799ms. #1687652 [58fd2763 / 58fd2763]
+I0612 09:09:59.462853 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 4.907854ms. #1687653 [008bd836 / 008bd836]
+I0612 09:09:59.473082 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 4 txs in 6.456384ms. #1687654 [8dd79e3f / 8dd79e3f]
+I0612 09:10:03.602396 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.895557ms. #1687655 [cd2f602a / cd2f602a]
+I0612 09:10:07.411640 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 4 txs in 5.677063ms. #1687656 [25dd077a / 25dd077a]
+I0612 09:10:43.271470 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.619402ms. #1687657 [4ee5c3a1 / 4ee5c3a1]
+I0612 09:11:01.313718 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 23 txs in 33.006036ms. #1687658 [bd6b4c1e / bd6b4c1e]
+I0612 09:11:15.213937 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 30 txs in 39.967784ms. #1687659 [918878c4 / 918878c4]
+I0612 09:11:54.376049 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 6 txs in 7.148931ms. #1687660 [bb76be43 / bb76be43]
+I0612 09:12:04.883373 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 6.472457ms. #1687661 [ac9c1e44 / ac9c1e44]
+I0612 09:12:19.141803 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 7.267142ms. #1687662 [9d8bd48a / 9d8bd48a]
+I0612 09:12:22.889499 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 6 txs in 9.265954ms. #1687663 [5e102723 / 5e102723]
+I0612 09:12:27.239394 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 3.494747ms. #1687664 [c38a3b6e / c38a3b6e]
+I0612 09:12:30.780633 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 6.795246ms. #1687665 [65cba66c / 65cba66c]
+I0612 09:12:36.163050 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 5.868788ms. #1687666 [36b34789 / 36b34789]
+I0612 09:12:38.438059 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 6.450447ms. #1687667 [6bb7ce8a / 6bb7ce8a]
+I0612 09:12:38.692551 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 7.771632ms. #1687667 [f8674c1d / f8674c1d]
+I0612 09:12:47.411980 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 9.342886ms. #1687668 [e1918591 / e1918591]
+I0612 09:13:07.536638 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 5.957096ms. #1687669 [7dd3032c / 7dd3032c]
+I0612 09:13:24.278261 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 9 txs in 11.509496ms. #1687670 [bdbf91fc / bdbf91fc]
+I0612 09:13:33.680344 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 6.947215ms. #1687671 [767ce4fb / 767ce4fb]
+I0612 09:13:35.138701 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 7.347396ms. #1687672 [c26804f0 / c26804f0]
+I0612 09:13:40.231186 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 2.791897ms. #1687673 [3d530df4 / 3d530df4]
+I0612 09:13:42.466435 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.219068ms. #1687674 [363a74c1 / 363a74c1]
+I0612 09:13:44.339686 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 4.135342ms. #1687675 [c8af6c0b / c8af6c0b]
+I0612 09:13:50.972108 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.832186ms. #1687676 [ed1ef580 / ed1ef580]
+I0612 09:14:05.337663 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 5.334135ms. #1687677 [b94d2667 / b94d2667]
+I0612 09:14:07.529282 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 7.579023ms. #1687678 [2909de95 / 2909de95]
+I0612 09:15:12.132516 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 6.048297ms. #1687679 [70945bb9 / 70945bb9]
+I0612 09:15:12.266024 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 5.629072ms. #1687680 [aa85ba34 / aa85ba34]
+I0612 09:15:12.276201 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 6 txs in 6.615477ms. #1687681 [2dd5a49a / 2dd5a49a]
+I0612 09:15:12.302056 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 23 txs in 22.282505ms. #1687682 [2bd94926 / 2bd94926]
+I0612 09:15:12.317460 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 10 txs in 11.567762ms. #1687683 [1bcd476a / 1bcd476a]
+I0612 09:15:16.640701 core/blockchain.go:959] imported 0 block(s) (0 queued 4 ignored) including 0 txs in 4.39905ms. #1687683 [aa85ba34 / 1bcd476a]
+I0612 09:15:22.509943 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 7.54986ms. #1687684 [dc3c6025 / dc3c6025]
+I0612 09:15:33.318480 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 9 txs in 12.632741ms. #1687685 [038d3325 / 038d3325]
+I0612 09:15:59.774989 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 4 txs in 5.23377ms. #1687686 [095e1e2d / 095e1e2d]
+I0612 09:16:08.438115 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 12 txs in 12.173622ms. #1687687 [8c651f45 / 8c651f45]
+I0612 09:16:11.304520 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 12.484143ms. #1687688 [c8efb43c / c8efb43c]
+I0612 09:16:21.370546 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 2.609382ms. #1687689 [26c36c87 / 26c36c87]

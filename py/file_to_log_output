@@ -1,0 +1,87 @@
+I0611 10:31:40.046592 ethdb/database.go:82] Alloted 128MB cache and 1024 file handles to /Users/mengfei/Library/Ethereum/chaindata
+I0611 10:31:40.912393 ethdb/database.go:169] closed db:/Users/mengfei/Library/Ethereum/chaindata
+I0611 10:31:40.913177 ethdb/database.go:82] Alloted 128MB cache and 1024 file handles to /Users/mengfei/Library/Ethereum/chaindata
+I0611 10:31:40.941412 ethdb/database.go:82] Alloted 16MB cache and 16 file handles to /Users/mengfei/Library/Ethereum/dapp
+I0611 10:31:40.944230 eth/backend.go:172] Protocol Versions: [63 62 61], Network Id: 1
+I0611 10:31:40.945719 eth/backend.go:201] Blockchain DB Version: 3
+I0611 10:31:40.946789 core/blockchain.go:206] Last header: #1678690 [2c43b66c…] TD=26305322759204978223
+I0611 10:31:40.946804 core/blockchain.go:207] Last block: #1678690 [2c43b66c…] TD=26305322759204978223
+I0611 10:31:40.946810 core/blockchain.go:208] Fast block: #1678690 [2c43b66c…] TD=26305322759204978223
+I0611 10:31:40.949022 p2p/server.go:311] Starting Server
+Fatal: Error starting protocol stack: listen udp :30303: bind: address already in use
+I0611 10:32:01.138225 ethdb/database.go:82] Alloted 128MB cache and 1024 file handles to /Users/mengfei/Library/Ethereum/chaindata
+I0611 10:32:01.163398 ethdb/database.go:169] closed db:/Users/mengfei/Library/Ethereum/chaindata
+I0611 10:32:01.163948 ethdb/database.go:82] Alloted 128MB cache and 1024 file handles to /Users/mengfei/Library/Ethereum/chaindata
+I0611 10:32:01.202129 ethdb/database.go:82] Alloted 16MB cache and 16 file handles to /Users/mengfei/Library/Ethereum/dapp
+I0611 10:32:01.206879 eth/backend.go:172] Protocol Versions: [63 62 61], Network Id: 1
+I0611 10:32:01.206979 eth/backend.go:201] Blockchain DB Version: 3
+I0611 10:32:01.207964 core/blockchain.go:206] Last header: #1678690 [2c43b66c…] TD=26305322759204978223
+I0611 10:32:01.207978 core/blockchain.go:207] Last block: #1678690 [2c43b66c…] TD=26305322759204978223
+I0611 10:32:01.207985 core/blockchain.go:208] Fast block: #1678690 [2c43b66c…] TD=26305322759204978223
+I0611 10:32:01.209125 p2p/server.go:311] Starting Server
+I0611 10:32:03.243839 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 10:32:03.243940 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 10:32:03.243979 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANConnectionDevice:1"
+I0611 10:32:03.243991 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 10:32:03.244002 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 10:32:03.244014 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 10:32:03.244025 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 10:32:03.244036 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANConnectionDevice:1"
+I0611 10:32:03.244048 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANConnectionDevice:1"
+I0611 10:32:03.244123 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 10:32:03.244165 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 10:32:03.244179 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 10:32:03.244191 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 10:32:03.244223 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+I0611 10:32:03.244235 ssdp.go:63] ssdp: got unexpected search target result "urn:schemas-upnp-org:device:WANDevice:1"
+I0611 10:32:03.301303 p2p/nat/nat.go:111] mapped network port udp:30303 -> 30303 (ethereum discovery) using UPNP IGDv1-IP1
+I0611 10:32:03.403903 p2p/discover/udp.go:217] Listening, enode://eb4101dfc56d3a623fb71b89f3cecc80f60ecfe93133a7610cd2aa695ddc398351d8a6e88b40bb208b793a2786e268759bec3ad990b0b7f041eef21725e15560@180.155.157.94:30303
+I0611 10:32:03.404238 p2p/server.go:554] Listening on [::]:30303
+I0611 10:32:03.404816 node/node.go:298] IPC endpoint opened: /Users/mengfei/Library/Ethereum/geth.ipc
+I0611 10:32:03.433878 release/release.go:132] -----------------------------------------------------------------------------------
+I0611 10:32:03.433901 release/release.go:133] Client v1.4.5-a269a713 seems older than the latest upstream release v1.4.6-0f036f62
+I0611 10:32:03.433909 release/release.go:134] Please check https://github.com/ethereum/go-ethereum/releases for new releases
+I0611 10:32:03.433917 release/release.go:135] -----------------------------------------------------------------------------------
+I0611 10:32:03.448615 p2p/nat/nat.go:111] mapped network port tcp:30303 -> 30303 (ethereum p2p) using UPNP IGDv1-IP1
+I0611 10:32:13.408900 eth/downloader/downloader.go:299] Block synchronisation started
+I0611 10:33:09.533739 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 2188 txs in 7.757503734s. #1678946 [123d9f86 / 64f39c5a]
+I0611 10:33:10.360477 core/blockchain.go:959] imported 86 block(s) (0 queued 0 ignored) including 337 txs in 826.464185ms. #1679032 [3d49ba27 / 287e72e1]
+I0611 10:33:13.589060 core/blockchain.go:959] imported 234 block(s) (0 queued 0 ignored) including 1691 txs in 3.226702351s. #1679266 [0b2dc22b / c54f7e61]
+I0611 10:33:24.161760 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 10.354492ms. #1679267 [be3c600a / be3c600a]
+I0611 10:33:24.330525 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 3 txs in 7.25288ms. #1679268 [a61b3865 / a61b3865]
+I0611 10:33:31.572029 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1874 txs in 2.935251096s. #1679524 [f55aa6a1 / daca45c4]
+I0611 10:33:33.840756 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1196 txs in 2.268016678s. #1679780 [c47a1fb5 / 8b43da6f]
+I0611 10:33:37.107400 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1799 txs in 3.265904176s. #1680036 [ed6454eb / 365a51fc]
+I0611 10:33:38.853408 core/blockchain.go:959] imported 133 block(s) (0 queued 0 ignored) including 1026 txs in 1.745655736s. #1680169 [b81cde9a / 9bdec66e]
+I0611 10:33:46.326627 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 3333 txs in 7.462845928s. #1680425 [eb7a1018 / 6f4cc933]
+I0611 10:33:47.958473 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 960 txs in 1.631198343s. #1680681 [80748ee8 / 76617cd1]
+I0611 10:33:49.567044 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 814 txs in 1.60785351s. #1680937 [19fdc300 / 39ff9105]
+I0611 10:33:51.885459 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1412 txs in 2.317725s. #1681193 [2305f52d / e025dd90]
+I0611 10:33:53.531428 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1045 txs in 1.643451212s. #1681449 [6d517c90 / 602be29e]
+I0611 10:33:55.459457 core/blockchain.go:959] imported 256 block(s) (0 queued 0 ignored) including 1084 txs in 1.927350701s. #1681705 [ff6ea62e / b84266ae]
+I0611 10:34:00.786046 core/blockchain.go:959] imported 194 block(s) (0 queued 0 ignored) including 2171 txs in 5.326043841s. #1681899 [9eec93cf / 42e69f72]
+I0611 10:34:03.933249 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 6.25595ms. #1681900 [9d3681ea / 9d3681ea]
+I0611 10:34:04.162700 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 12.424952ms. #1681901 [13da024b / 13da024b]
+I0611 10:34:08.498511 core/blockchain.go:959] imported 2 block(s) (0 queued 0 ignored) including 2 txs in 10.633108ms. #1681903 [e4d131ae / 2b6088d7]
+I0611 10:34:13.568809 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 11.684947ms. #1681904 [eb12afc0 / eb12afc0]
+I0611 10:34:15.126409 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 4.745064ms. #1681902 [451ffdbe / 451ffdbe]
+I0611 10:34:15.883205 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 5 txs in 8.830227ms. #1681905 [63a6e71a / 63a6e71a]
+I0611 10:34:28.745068 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.942448ms. #1681906 [e11606b8 / e11606b8]
+I0611 10:34:30.322770 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 8.46425ms. #1681907 [8426aa5a / 8426aa5a]
+I0611 10:34:30.558885 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 7.67982ms. #1681907 [afdaa0c9 / afdaa0c9]
+I0611 10:34:36.331676 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 7.159929ms. #1681908 [2e893784 / 2e893784]
+I0611 10:34:37.016236 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 4.242146ms. #1681908 [46fc19ba / 46fc19ba]
+I0611 10:34:52.782604 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 4.895029ms. #1681909 [8a180ebe / 8a180ebe]
+I0611 10:34:57.873282 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 16.223577ms. #1681910 [31c564ef / 31c564ef]
+I0611 10:35:52.144740 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 2.770891ms. #1681911 [3646a1ac / 3646a1ac]
+I0611 10:36:00.683611 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 7 txs in 13.884761ms. #1681912 [d7e5f8a6 / d7e5f8a6]
+I0611 10:36:04.743053 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 5.91845ms. #1681913 [aaee5da6 / aaee5da6]
+I0611 10:36:21.860980 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 3.192073ms. #1681914 [44db50ed / 44db50ed]
+I0611 10:36:22.941085 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 2 txs in 6.882319ms. #1681915 [1707ffce / 1707ffce]
+I0611 10:36:31.143690 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 4.945895ms. #1681916 [5fc736da / 5fc736da]
+I0611 10:36:56.126798 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 6.161288ms. #1681917 [4b2ec853 / 4b2ec853]
+I0611 10:36:58.336108 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 1 txs in 6.403067ms. #1681918 [7ca48fe9 / 7ca48fe9]
+I0611 10:37:09.801275 core/blockchain.go:959] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 2.813644ms. #1681919 [b8d837e6 / b8d837e6]
+I0611 10:37:10.564930 node/node.go:330] IPC endpoint closed: /Users/mengfei/Library/Ethereum/geth.ipc
+I0611 10:37:10.564962 core/blockchain.go:565] Chain manager stopped
+I0611 10:37:10.564970 eth/handler.go:200] Stopping ethereum protocol handler...

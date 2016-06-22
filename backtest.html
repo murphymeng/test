@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+        </title>
+
+        <script type="text/javascript" src="../jquery.js"></script>
+        <script type="text/javascript" src="./js/underscore.js"></script>
+        <script type="text/javascript" src="./js/vue.min.js"></script>
+        <script type="text/javascript" src="common.js"></script>
+        <script src="./js/class.js"></script>
+        <script src="./js/account.js"></script>
+        <script type="text/javascript" src="./js/backtest.js"></script>
+        <link rel="stylesheet" href="./css/master.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="./css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+        <div id="money"></div>
+        <div id="history">
+            <table class="table table-bordered table-striped">
+                <tr>
+                  <th>名称</th>
+                  <th>买入日期</th>
+                  <th>卖出日期</th>
+                  <th>收益</th>
+                </tr>
+                <tr v-for="data in historyList">
+                    <td>{{data.name}}</td>
+                    <td>{{data.buyTime}}</td>
+                    <td>{{data.sellTime}}</td>
+                    <td>{{data.profit}}</td>
+                </tr>
+            </table>
+
+        </div>
+        <script src="./js/highstock.js"></script>
+        <script src="./js/exporting.js"></script>
+    </body>
+</html>

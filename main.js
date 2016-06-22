@@ -1,10 +1,7 @@
 $(document).ready(function() {
     $.ajax({
-<<<<<<< HEAD
-        url: './data/SH601688.json',
-=======
+        //url: './data/SH601688.json',
         url: './data/cybz.json',
->>>>>>> origin/master
     }).done(function(obj) {
         //dataList = obj.chartlist;
         var symbol;
@@ -53,7 +50,7 @@ $(document).ready(function() {
 
         dataList = dataList.filter(function(data) {
             var d = new Date(data.time);
-            var d2 = new Date('2007-10-16');
+            var d2 = new Date('2010-10-16');
             return d.getTime() > d2.getTime() && data.ma60;
         });
 
@@ -64,10 +61,11 @@ $(document).ready(function() {
         var account = new Account({
             name: 'macd',
             needBuy: function(preData) {
-                return preData.macd >= 0;
+
+                return preData.close >= preData.ma30;
             },
             needSell: function(preData) {
-                return preData.macd < 0;
+                return preData.close < preData.ma30;
             },
             money: dataList[0].close
         });
@@ -76,6 +74,11 @@ $(document).ready(function() {
         var maArr = [];
         for (var i = 5; i < 60; i++) {
             maArr.push(i);
+        }
+
+        var maArr2 = [];
+        for (var i = 5; i < 60; i++) {
+            maArr2.push(i);
         }
 
         //maArr = [20];
@@ -93,6 +96,26 @@ $(document).ready(function() {
             });
             accountList.push(account);
         })
+
+        // 双均线策略
+        // $.each(maArr, function(idx1, ma1) {
+        //     $.each(maArr2, function(idx2, ma2) {
+        //         if (ma2 > ma1) {
+        //             var account = new Account({
+        //                 name: 'ma' + ma1 + ' ' + 'ma' + ma2,
+        //                 needBuy: function(preData) {
+        //                     return preData['ma' + ma1] > preData['ma' + ma2];
+        //                 },
+        //                 needSell: function(preData) {
+        //                     return preData['ma' + ma1] < preData['ma' + ma2];
+        //                 },
+        //                 money: dataList[0].close
+        //             });
+        //             accountList.push(account);
+        //         }
+        //     });
+        //
+        // })
 
 
 
