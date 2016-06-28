@@ -26,12 +26,18 @@ class Results(object):
     def on_get(self, req, resp):
         """Handles GET requests"""
 
+        start_time = req.params['start_time']
+        print start_time
+        start_time_arr = start_time.split('-')
+        end_time = req.params['end_time']
+        end_time_arr = end_time.split('-')
+
         client = MongoClient('localhost', 27017)
         db = client.gupiao
         collection = db.day
 
-        start_time = datetime.datetime(2015, 10, 19)
-        end_time = datetime.datetime(2016, 4, 11)
+        start_time = datetime.datetime(int(start_time_arr[0]), int(start_time_arr[1]), int(start_time_arr[2]))
+        end_time = datetime.datetime(int(end_time_arr[0]), int(end_time_arr[1]), int(end_time_arr[2]))
 
         rows = db.day.find({
             'symbol': 'SH000001',
@@ -106,7 +112,7 @@ class Results(object):
                     data['name'] = preData['name']
 
 
-                    if (float(data['open']) / preData['close'] - 1) * 100 < 6.7 and data['symbol'] != 'SZ000938':
+                    if (float(data['open']) / preData['close'] - 1) * 100 < 6.7 and data['symbol'] != 'SZ000938' and data['symbol'] != 'SZ300132':
                          account.buy(data)
                 account.doNothing(row['time'])
             else:
@@ -115,8 +121,9 @@ class Results(object):
 
             stocks = db.day.find({
                 'percent': {'$gt': 8},
-                'macd': {'$gt': 0.21},
+                #'macd': {'$gt': 0.21},
                 'volume_rate': {'$gt': 3},
+                'turnrate': {'$gt': 8},
                 'time': row['time']
             })
             if stocks.count() > 0:
@@ -170,11 +177,57 @@ class Results(object):
 
         resp.body = json.dumps(res)
 
+class Days(object):
+    def on_get(self, req, resp):
+        """Handles GET requests"""
+
+        client = MongoClient('localhost', 27017)
+        db = client.gupiao
+
+        symbol = req.params['symbol']
+        sell_time = req.params['sell_time']
+        buy_time = req.params['buy_time']
+
+        time_arr = sell_time.split('-')
+        sell_time = datetime.datetime(int(time_arr[0]), int(time_arr[1]), int(time_arr[2]))
+        start_time = sell_time - datetime.timedelta(days=30)
+        end_time = sell_time + datetime.timedelta(days=30)
+
+        rows = db.day.find({
+            'symbol': symbol,
+            'time': {'$gt': start_time, '$lt': end_time}
+        })
+        arr = []
+        for row in rows:
+            arr.append({
+                'time': str(row['time'])[0:10],
+                'open': row['open'],
+                'close': row['close'],
+                'high': row['high'],
+                'low': row['low'],
+                'percent': row['percent'],
+                'turnrate': row['turnrate'],
+                'volume': row['volume']
+            })
+
+        resp.body = json.dumps({
+            'symbol': symbol,
+            'arr': arr,
+            'sellTime': req.params['sell_time'],
+            'buyTime': req.params['buy_time']
+        })
+
+
+
 # falcon.API instances are callable WSGI apps
 app = falcon.API(middleware=[CorsMiddleware()])
 
 # Resources are represented by long-lived class instances
 results = Results()
 
+days = Days()
+
 # things will handle all requests to the '/things' URL path
 app.add_route('/results', results)
+
+app.add_route('/days', days)
