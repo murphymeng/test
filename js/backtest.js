@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
-
+    var d = new Date();
+    var end_time = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+    $('#end-time').val(end_time);
     $('#search').on('click', function() {
       var start_time = $('#start-time').val();
-      var end_time = $('#end-time').val();
       $.get( "http://localhost:8000/results", {
         'start_time': start_time,
         'end_time': end_time
@@ -19,8 +20,9 @@ $(document).ready(function() {
               moneyArr.push(item.money);
               //baseArr.push(res['baseList'][idx].y);
           });
+          if (res.myList.length === 0) {
 
-          if (!window.historyTable) {
+          } else if (!window.historyTable && res.myList.length > 0) {
              window.historyTable = $('#history-list').dataTable({
                 "order": [[ 2, 'asc' ]],
                 "data": res.myList,

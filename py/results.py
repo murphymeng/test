@@ -27,57 +27,59 @@ class Results(object):
         """Handles GET requests"""
 
         start_time = req.params['start_time']
-        print start_time
         start_time_arr = start_time.split('-')
+        start_time_arr = map(int, start_time_arr)
         end_time = req.params['end_time']
         end_time_arr = end_time.split('-')
+        end_time_arr = map(int, end_time_arr)
 
         client = MongoClient('localhost', 27017)
         db = client.gupiao
         collection = db.day
 
-        start_time = datetime.datetime(int(start_time_arr[0]), int(start_time_arr[1]), int(start_time_arr[2]))
-        end_time = datetime.datetime(int(end_time_arr[0]), int(end_time_arr[1]), int(end_time_arr[2]))
+        start_time = datetime.datetime(*start_time_arr)
+        end_time = datetime.datetime(*end_time_arr)
 
         rows = db.day.find({
             'symbol': 'SH000001',
-            'time': {'$gt': start_time, '$lt': end_time}
+            'time': {'$gte': start_time, '$lt': end_time}
         })
 
-        account = Account({
-
-        })
+        # 创建账户
+        account = Account({})
 
         #最小持股天数
         minKeepDay = 2
 
-        baseMoney = 10000
-        preBaseData = None
-        preData = None
-        baseResults = []
+        baseMoney = 10000 #起始资金
+        preBaseData = None #前一天的基准数据
+        preData = None #前一天数据
+        baseResults = [] #基准数据结果集
 
         baseStock = 'SH000001'
         baseList = db.day.find({
             'symbol': baseStock,
-            'time': {'$gt': start_time, '$lt': end_time}
+            'time': {'$gte': start_time, '$lt': end_time}
         })
         baseDict = {}
         baseValue = None
         preSzzsData = None
+        preDataList = None
 
         for row in baseList:
             if baseValue == None:
                 baseValue = float(10000) / row['open']
             baseDict[row['time']] = row['close'] * baseValue
 
+        rowIndex = 0
         for row in rows:
+            rowIndex += 1
             if row['time'] in baseDict and baseDict[row['time']]:
                 baseResults.append({
                     'time': str(row['time'])[0:10],
                     'y': baseDict[row['time']]
                 })
             else:
-                print 'bb'
                 baseResults.append({
                     'time': str(row['time'])[0:10],
                     'y': baseResults[-1][y]
@@ -99,57 +101,70 @@ class Results(object):
                 else:
                     data = items[0]
                     account.sell(data)
-            elif preData and account.hasStock == False:
+            elif preDataList and account.hasStock == False:
                 #print preData
-                items = db.day.find({
-                    'symbol': preData['symbol'],
-                    'time': row['time']
-                })
-                #print '#'
-                #print items.count()
-                if items.count() == 1:
-                    data = items[0]
-                    data['name'] = preData['name']
+                buy_stock = None
+                data = None
+                result_data = None # 要买入的股票
 
 
-                    if (float(data['open']) / preData['close'] - 1) * 100 < 6.7 and data['symbol'] != 'SZ000938' and data['symbol'] != 'SZ300132':
-                         account.buy(data)
-                account.doNothing(row['time'])
+                for stock in preDataList:
+                    items = db.day.find({
+                        'symbol': stock['symbol'],
+                        'time': row['time']
+                    })
+                    if items.count() == 1:
+                        data = items[0]
+                        if (float(data['open']) / stock['close'] - 1) * 100 > 9:
+                            continue
+                        else:
+                            # 上市时间如果小于40天就过滤
+                            gupiao = db.stock.find({'code': stock['symbol']})[0]
+                            #print gupiao['name']
+                            #print row['time']
+                            age = (row['time'] - gupiao['start_time']).days
+                            if age < 40:
+                                continue
+                            stock['total_value'] = gupiao['total_shares'] * stock['close']
+                            if (buy_stock and buy_stock['total_value'] > stock['total_value']) or buy_stock == None:
+                                buy_stock = stock
+                                result_data = data
+                                result_data['name'] = gupiao['name']
+                    else:
+                        continue
+
+                if result_data:
+                    account.buy(result_data)
+                else:
+                    account.doNothing(row['time'])
+
             else:
                 account.doNothing(row['time'])
 
-
+            # print row['time']
+            # print '################'
             stocks = db.day.find({
                 'percent': {'$gt': 8},
                 #'macd': {'$gt': 0.21},
-                'volume_rate': {'$gt': 3},
+                'volume_rate': {'$gt': 4},
                 'turnrate': {'$gt': 8},
                 'time': row['time']
             })
+            #print stocks.count()
             if stocks.count() > 0:
-                buy_stock = None
-                #print row['time']
-                for stock in stocks:
-                    gupiao = db.stock.find({'code': stock['symbol']})[0]
-                    stock['name'] = gupiao['name']
-
-                    # 上市时间如果小于40天就过滤
-                    age = (row['time'] - gupiao['start_time']).days
-                    if age < 40:
-                        continue
-
-                    # 如果昨天涨幅也很高则过滤
-
-
-                    #print '#' + stock['name']
-                    stock['total_value'] = gupiao['total_shares'] * stock['close']
-                    if (buy_stock and buy_stock['total_value'] > stock['total_value']) or buy_stock == None:
-                        buy_stock = stock
-                #print buy_stock['name'] + ' ' + row['time'].strftime('%Y/%m/%d')
-                preData = buy_stock
+                preDataList = stocks
+                # print 'rowindex:'
+                # print rowIndex
+                # print 'rows.count():'
+                # print rows.count()
+                if rowIndex == rows.count():
+                    print 'last day'
+                    for wantData in preDataList:
+                        print wantData['symbol']
                 #print preData
             else:
                 preData = None
+                preDataList = None
 
             preSzzsData = row
 
@@ -165,7 +180,9 @@ class Results(object):
             #print profit
             if profit > 1:
                 winTime += 1
-        print '成功率' + str(float(winTime) / totalCount)
+
+        if totalCount > 0:
+            print '成功率' + str(float(winTime) / totalCount)
 
 
         res = {
