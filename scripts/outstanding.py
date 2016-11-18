@@ -18,3 +18,4 @@ for s in db.stock.find({}):
 
     total_shares = df.loc[s['code'][2:]].totals
     db.stock.find_one_and_update({'code': code}, {'$set': {'total_shares': total_shares}})
+    print str(s['code']) + ' updated'

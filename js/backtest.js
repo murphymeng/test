@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
     var d = new Date();
-    var end_time = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-    $('#end-time').val(end_time);
+    var init_end_time = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+    $('#end-time').val(init_end_time);
     $('#search').on('click', function() {
       var start_time = $('#start-time').val();
-      $.get( "http://localhost:8000/results", {
+      var end_time = $('#end-time').val();
+      $.get( "http://localhost:8888/results", {
         'start_time': start_time,
         'end_time': end_time
       }, function( res ) {
@@ -14,11 +15,9 @@ $(document).ready(function() {
           var moneyArr = [];
           var baseArr = [];
           _.each(res.myList, function(item, idx) {
-              //item.x = idx;
               item.y = item.money;
               dateArr.push(item.time);
               moneyArr.push(item.money);
-              //baseArr.push(res['baseList'][idx].y);
           });
           if (res.myList.length === 0) {
 
@@ -55,7 +54,7 @@ $(document).ready(function() {
               var sell_time = this.dataset.selltime;
               var buy_time = this.dataset.buytime;
 
-              $.get("http://localhost:8000/days", {
+              $.get("http://localhost:8888/days", {
                     name: name,
                     symbol: symbol,
                     sell_time: sell_time,

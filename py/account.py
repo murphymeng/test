@@ -28,6 +28,9 @@ class Account:
         # 扣除佣金
         self.money = (1 - 0.0003) * self.money
 
+        # 扣除佣金
+        self.money = (1 - 0.002) * self.money
+
     def sell(self, data):
         singleProfit = 1
         if float(data['high']) / self.buyData['close'] >= 1.09:

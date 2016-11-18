@@ -8,6 +8,7 @@ import datetime
 import requests
 from pymongo import MongoClient
 from account import Account
+import random
 
 ALLOWED_ORIGINS = ['http://localhost']
 
@@ -27,11 +28,9 @@ class Results(object):
         """Handles GET requests"""
 
         start_time = req.params['start_time']
-        start_time_arr = start_time.split('-')
-        start_time_arr = map(int, start_time_arr)
+        start_time_arr = map(int, start_time.split('-'))
         end_time = req.params['end_time']
-        end_time_arr = end_time.split('-')
-        end_time_arr = map(int, end_time_arr)
+        end_time_arr = map(int, end_time.split('-'))
 
         client = MongoClient('localhost', 27017)
         db = client.gupiao
@@ -40,6 +39,7 @@ class Results(object):
         start_time = datetime.datetime(*start_time_arr)
         end_time = datetime.datetime(*end_time_arr)
 
+        # 以上证指数为基准
         rows = db.day.find({
             'symbol': 'SH000001',
             'time': {'$gte': start_time, '$lt': end_time}
@@ -68,28 +68,31 @@ class Results(object):
 
         for row in baseList:
             if baseValue == None:
-                baseValue = float(10000) / row['open']
+                baseValue = 10000.0 / row['open']
             baseDict[row['time']] = row['close'] * baseValue
 
         rowIndex = 0
+        # 遍历上证指数
         for row in rows:
             rowIndex += 1
-            if row['time'] in baseDict and baseDict[row['time']]:
-                baseResults.append({
-                    'time': str(row['time'])[0:10],
-                    'y': baseDict[row['time']]
-                })
-            else:
-                baseResults.append({
-                    'time': str(row['time'])[0:10],
-                    'y': baseResults[-1][y]
-                })
+            # if row['time'] in baseDict and baseDict[row['time']]:
+            #     baseResults.append({
+            #         'time': str(row['time'])[0:10],
+            #         'y': baseDict[row['time']]
+            #     })
+            # else:
+            #     # 有待修改
+            #     print '#######'
+            #     baseResults.append({
+            #         'time': str(row['time'])[0:10],
+            #         'y': baseResults[-1][y]
+            #     })
+            #
+            # if preBaseData:
+            #     baseMoney = baseMoney * (row['close'] / preBaseData['close'])
+            # preBaseData = row
 
-            if preBaseData:
-                baseMoney = baseMoney * (row['close'] / preBaseData['close'])
 
-
-            preBaseData = row
             if account.hasStock == True:
                 # 判断之前买入的股票今天是否有停牌，没有就卖出
                 items = db.day.find({
@@ -99,16 +102,16 @@ class Results(object):
                 if (account.keepDays + 1) < minKeepDay or items.count() != 1:
                     account.keepStock(row['time'])
                 else:
-                    data = items[0]
-                    account.sell(data)
+                    account.sell(items[0])
             elif preDataList and account.hasStock == False:
                 #print preData
                 buy_stock = None
                 data = None
                 result_data = None # 要买入的股票
 
-
+                #tempArr = []
                 for stock in preDataList:
+                    #tempArr.append(stock);
                     items = db.day.find({
                         'symbol': stock['symbol'],
                         'time': row['time']
@@ -126,12 +129,32 @@ class Results(object):
                             if age < 40:
                                 continue
                             stock['total_value'] = gupiao['total_shares'] * stock['close']
-                            if (buy_stock and buy_stock['total_value'] > stock['total_value']) or buy_stock == None:
+
+                            if stock['total_value'] > 2000000:
+                                continue
+
+                            # print stock['total_value']
+                            if (buy_stock and buy_stock['total_value'] < stock['total_value']) or buy_stock == None:
                                 buy_stock = stock
+
+                                # data是今天的数据, stock是昨天的数据
                                 result_data = data
                                 result_data['name'] = gupiao['name']
                     else:
                         continue
+
+
+                # select_stock = random.choice(tempArr)
+                # if select_stock:
+                #     items = db.day.find({
+                #         'symbol': select_stock['symbol'],
+                #         'time': row['time']
+                #     })
+                #     gupiao = db.stock.find({'code': select_stock['symbol']})[0]
+                #     # print 'item count:' + str(items.count())
+                #     if items.count() == 1:
+                #         result_data = items[0]
+                #         result_data['name'] = gupiao['name']
 
                 if result_data:
                     account.buy(result_data)
@@ -141,8 +164,6 @@ class Results(object):
             else:
                 account.doNothing(row['time'])
 
-            # print row['time']
-            # print '################'
             stocks = db.day.find({
                 'percent': {'$gt': 8},
                 #'macd': {'$gt': 0.21},
@@ -157,6 +178,8 @@ class Results(object):
                 # print rowIndex
                 # print 'rows.count():'
                 # print rows.count()
+                # print ('rowIndex: ' + str(rowIndex))
+                # print ('rows count: ' + str(rows.count()))
                 if rowIndex == rows.count():
                     print 'last day'
                     for wantData in preDataList:
@@ -194,6 +217,8 @@ class Results(object):
 
         resp.body = json.dumps(res)
 
+
+# 显示k线图
 class Days(object):
     def on_get(self, req, resp):
         """Handles GET requests"""

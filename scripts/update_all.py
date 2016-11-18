@@ -33,7 +33,7 @@ for stock in stockRows:
 
     for index, row in df.iterrows():
 
-        index_arr = index.split('-');
+        index_arr = index.split('-')
 
         index_datetime = datetime.datetime(int(index_arr[0]), int(index_arr[1]), int(index_arr[2]))
         #print index_datetime
